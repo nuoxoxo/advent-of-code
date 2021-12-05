@@ -13,26 +13,22 @@
 
 #include <iostream>
 
-int     main()
+int     main(void)
 {
-   int  count, pos, i;
-   char c;
+        int     flo, pos, i;
+        char    c;
 
-   count = 0;
-   pos = 0;
-   i = 0;
-   while (std::cin >> c)
-   {
-       if (count == -1 && pos == 0)
-       {
-           pos = i;
-       }
-       if (c == '(')    count++;
-       if (c == ')')    count--;
-       i++;
-   }
-   
-   std::cout
-       << "Star 1 : " << count << '\n' 
-       << "Star 2 : " << pos << '\n';
+        flo = pos = i = 0;
+        while (std::cin >> c)
+        {
+            if (flo == -1 && pos == 0)  pos = i;
+            if (c == '(')               flo++;
+            if (c == ')')               flo--;
+            i++;
+        }
+
+        std::cout << "Star 1 : " << flo << std::endl;
+        std::cout << "Star 2 : " << pos << std::endl;
+
+        return (0);
 }
