@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+.DS_Store
+Thumbs.db
+*.pdf
+*.txt
+test.*
+test
+*.swp
+*.swo
+*.swn
