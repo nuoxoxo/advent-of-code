@@ -151,10 +151,7 @@ std::string apply_mask(std::string mask, std::string val_binary)
         int     i = -1;
 
         while (++i < (int) mask.length())
-        {
-            if (mask[i] != 'X')
-              val_binary[i] = mask[i];
-        }
+            if (mask[i] != 'X') val_binary[i] = mask[i];
 
         return (val_binary);
 }

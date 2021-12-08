@@ -14,9 +14,9 @@
 #include <iostream>
 #include <vector>
 
-int count_double(std::string s);
-int count_vowel(std::string s);
-int count_pair(std::string s);
+int     count_double(std::string s);
+int     count_vowel(std::string s);
+int     count_pair(std::string s);
 int count_efe(std::string s);
 int count_ab(std::string s);
 
