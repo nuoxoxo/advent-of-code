@@ -18,20 +18,19 @@
 // std::pair (const first_type& a, const second_type& b); -> coordinates
 // #include <utility>   // std::pair, std::make_pair
 
-int if_exists(std::pair<int, int> pair, \
-    std::vector< std::pair<int, int> > path);
+int     if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > path);
 
 int     main()
 {
-    std::vector< std::pair <int, int> > path_santa;
-    std::vector< std::pair <int, int> > path_claus;
-    int     step, x, y, a, b, c, d;
-    char    buff;
+        std::vector< std::pair <int, int> > path_santa;
+        std::vector< std::pair <int, int> > path_claus;
+        int                                 step, x, y, a, b, c, d;
+        char                                buff;
 
-    step = x = y = 0;
-    a = b = 0;
-    c = d = 0;
-    path_santa.push_back(std::make_pair(x, y));
+        step = x = y = 0;
+        a = b = 0;
+        c = d = 0;
+        path_santa.push_back(std::make_pair(x, y));
     path_claus.push_back(std::make_pair(x, y));
     while (std::cin >> buff)
     {
