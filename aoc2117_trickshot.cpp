@@ -62,7 +62,10 @@ int     main(void)
                     if (i > 0)      i--;
                     else if (i < 0) i++;
                     j--;
-                    if (x <= xo && x >= xa && y <= yo && y >= ya)   hit = true;
+                    if (x <= xo && x >= xa && y <= yo && y >= ya)
+                    {
+                        hit = true;
+                    }
                 }
                 if (hit)    P2 += 1;
                 /*

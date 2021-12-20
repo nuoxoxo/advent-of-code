@@ -26,7 +26,7 @@ int     main(void)
 
         sscanf(s.c_str(),
         "target area: x=%i..%i, y=%i..%i\n", &xa, &xo, &ya, &yo);
-        cout << xa << ' ' << xo << ' ' << ya << ' ' << yo << endl; // test
+        //cout << xa << ' ' << xo << ' ' << ya << ' ' << yo << endl; // test
         Y = IV = 0;
         dx = -1 * max - 1;
         while (++dx < max + 1)
