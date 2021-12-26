@@ -12,7 +12,6 @@
 /* ************************************ nuo *** */
 
 #include <iostream>
-#include <sstream>
 #include <vector>
 
 int	count_single(std::vector<int>);
