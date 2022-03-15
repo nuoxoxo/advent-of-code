@@ -12,10 +12,10 @@
 /* ****************************************************************** nuo *** */
 
 #include "iostream"
-#include "vector"
 #include "sstream"
-#include "map"
+#include "vector"
 #include "stack"
+#include "map"
 
 using   namespace std;
 
