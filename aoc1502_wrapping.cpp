@@ -15,18 +15,21 @@
 #include <sstream>
 #include <vector>
 
-std::vector<int>    parseSides(std::string s);
+std::vector<int>	parseSides(std::string s);
 
 int	main(void)
 {
-        int             ribbon, paper, minPerim, minSlack;
+        int             ribbon;
+	int		paper;
+	int		minPerim;
+	int		minSlack;
         std::string     s;
 
         ribbon = paper = 0;
         while (std::cin >> s)
         {
-            std::vector<int>    arr = parseSides(s);
-            int                 total, i, j;
+            std::vector<int>	arr = parseSides(s);
+            int			total, i, j;
 
             minPerim = arr[0] * 2 + arr[1] * 2;
             minSlack = arr[0] * arr[1];
@@ -37,9 +40,11 @@ int	main(void)
                 j = i;
                 while (++j < (int) arr.size())
                 {
-                    int		perim = arr[i] * 2 + arr[j] * 2;
-                    int		slack = arr[i] * arr[j];
+                    int		perim;
+		    int		slack;
 
+		    perim = arr[i] * 2 + arr[j] * 2;
+		    slack = arr[i] * arr[j];
                     if (minSlack > slack)
 		    {
 			    minSlack = slack;
@@ -63,15 +68,17 @@ int	main(void)
 
 std::vector<int>    parseSides(std::string s)
 {
-        std::stringstream   ss(s);
-        std::vector<int>    arr;
-        int                 val;
+	std::stringstream	ss(s);
+	std::vector<int>	arr;
+	int			val;
 
         while (ss >> val)
-        {
-            arr.push_back(val);
-            if (ss.peek() == 'x')
-		    ss.ignore();
-        }
+	{
+		arr.push_back(val);
+		if (ss.peek() == 'x')
+		{
+			ss.ignore();
+		}
+	}
         return (arr);
 }
