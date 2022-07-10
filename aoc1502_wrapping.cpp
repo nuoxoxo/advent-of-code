@@ -17,7 +17,7 @@
 
 std::vector<int>    parseSides(std::string s);
 
-int     main(void)
+int	main(void)
 {
         int             ribbon, paper, minPerim, minSlack;
         std::string     s;
@@ -37,11 +37,17 @@ int     main(void)
                 j = i;
                 while (++j < (int) arr.size())
                 {
-                    int perim = arr[i] * 2 + arr[j] * 2;
-                    int slack = arr[i] * arr[j];
+                    int		perim = arr[i] * 2 + arr[j] * 2;
+                    int		slack = arr[i] * arr[j];
 
-                    if (minSlack > slack)   minSlack = slack;
-                    if (minPerim > perim)   minPerim = perim;
+                    if (minSlack > slack)
+		    {
+			    minSlack = slack;
+		    }
+		    if (minPerim > perim)
+		    {
+			    minPerim = perim;
+		    }
                     total += 2 * arr[i] * arr[j];
                 }
             }
@@ -49,14 +55,11 @@ int     main(void)
             total += minSlack;
             paper += total; 
         }
-
-        std::cout << "Star 1 : " << paper << std::endl;
-        std::cout << "Star 2 : " << ribbon << std::endl;
-
+        std::cout << 
+		"Star 1 : " << paper << std::endl << 
+		"Star 2 : " << ribbon << std::endl;
         return (0);
 }
-
-//
 
 std::vector<int>    parseSides(std::string s)
 {
@@ -67,8 +70,8 @@ std::vector<int>    parseSides(std::string s)
         while (ss >> val)
         {
             arr.push_back(val);
-            if ( ss.peek() == 'x' ) ss.ignore();
+            if (ss.peek() == 'x')
+		    ss.ignore();
         }
-
         return (arr);
 }
