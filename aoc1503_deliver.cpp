@@ -1,95 +1,97 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nxu *** */
 
 #include <iostream>
-#include <utility>
 #include <vector>
+#include <utility>	// pair . make_pair
 
-// std::pair (const first_type& a, const second_type& b); -> coordinates
-// #include <utility>   // std::pair, std::make_pair
+int	if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > path);
 
-int     if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > path);
-
-int     main()
+int	main(void)
 {
-        std::vector< std::pair <int, int> > path_santa;
-        std::vector< std::pair <int, int> > path_claus;
-        int                                 step, x, y, a, b, c, d;
-        char                                buff;
+	std::vector<std::pair<int, int> > path_santa;
+	std::vector<std::pair<int, int> > path_claus;
+	int			step, x, y, a, b, c, d;
+	char			buff;
 
-        step = x = y = 0;
-        a = b = 0;
-        c = d = 0;
-        path_santa.push_back(std::make_pair(x, y));
-    path_claus.push_back(std::make_pair(x, y));
-    while (std::cin >> buff)
-    {
-        if (buff == '>')
-        {
-            x++;
-            if (step % 2)   a++;
-            else            c++;
-        }
-        if (buff == '<')
-        {
-            x--;
-            if (step % 2)   a--;
-            else            c--;
-        }
-        if (buff == '^')
-        {
-            y++;
-            if (step % 2)   b++;
-            else            d++;
-        }
-        if (buff == 'v')
-        {
-            y--;
-            if (step % 2)   b--;
-            else            d--;
-        }
-
-        std::pair<int, int> pos_santa = std::make_pair(x, y);
-        if (!if_exists(pos_santa, path_santa))
-            path_santa.push_back(pos_santa);
-
-        std::pair<int, int> pos_nick = std::make_pair(a, b);
-        if (!if_exists(pos_nick, path_claus))
-            path_claus.push_back(pos_nick);
-
-        std::pair<int, int> pos_robo = std::make_pair(c, d);
-        if (!if_exists(pos_robo, path_claus))
-            path_claus.push_back(pos_robo);
-
-        step++;
-    }
-    std::cout << path_santa.size() << '\n';
-    std::cout << path_claus.size() << '\n';
+	step = x = y = 0;
+	a = b = 0;
+	c = d = 0;
+	path_santa.push_back(std::make_pair(x, y));
+	path_claus.push_back(std::make_pair(x, y));
+	while (std::cin >> buff)
+	{
+		if (buff == '>')
+		{
+			x++;
+			if (step % 2)
+				a++;
+			else
+				c++;
+		}
+		if (buff == '<')
+		{
+			x--;
+			if (step % 2)
+				a--;
+			else
+				c--;
+		}
+		if (buff == '^')
+		{
+			y++;
+			if (step % 2)
+				b++;
+			else
+				d++;
+		}
+		if (buff == 'v')
+		{
+			y--;
+			if (step % 2)
+				b--;
+			else
+				d--;
+		}
+		std::pair<int, int>	pos_santa = std::make_pair(x, y);
+		std::pair<int, int>	pos_nick = std::make_pair(a, b);
+		std::pair<int, int>	pos_robo = std::make_pair(c, d);
+		if (!if_exists(pos_santa, path_santa))
+			path_santa.push_back(pos_santa);
+		if (!if_exists(pos_nick, path_claus))
+			path_claus.push_back(pos_nick);
+		if (!if_exists(pos_robo, path_claus))
+			path_claus.push_back(pos_robo);
+		step++;
+	}
+	std::cout 
+	<< "Star 1: " << path_santa.size() << '\n'
+	<< "Star 2: " << path_claus.size() << '\n';
 }
 
 //
 
-int     if_exists(std::pair<int, int> pair, \
-        std::vector< std::pair<int, int> > path)
+int     if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > path)
 {
-        int     mark = 0;
-        int     i = 0;
+	int	mark, i;
 
-        while (i < (int) path.size())
-        {
-            if (pair == path[i])
-                mark++;
-            i++;
-        }
-        return (mark);
+	mark = 0;
+	i = -1;
+	while (++i < (int) path.size())
+	{
+		if (pair == path[i])
+			mark++;
+	}
+	return (mark);
 }
+
