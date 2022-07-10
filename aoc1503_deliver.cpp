@@ -85,8 +85,8 @@ int     if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > p
 {
 	int	mark, i;
 
-	mark = 0;
 	i = -1;
+	mark = 0;
 	while (++i < (int) path.size())
 	{
 		if (pair == path[i])
