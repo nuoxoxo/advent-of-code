@@ -1,19 +1,20 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <utility>
+
+#include "iostream"
+#include "vector"
+#include "utility"
 
 int                 count_after_end(int p, std::vector<std::pair<std::string, std::pair<int, bool> > > i);
 int                 count_before_rep(std::vector<std::pair<std::string, std::pair<int, bool> > > i);
@@ -21,7 +22,7 @@ std::vector<int>    find_nop_and_jmp(std::vector<std::pair<std::string, std::pai
 bool                check_pos(int p, std::vector<std::pair<std::string, std::pair<int, bool> > > i);
 void                put_ops(std::vector<std::pair<std::string, std::pair<int, bool> > > i);
 
-int     main(void)
+int     main()
 {
         std::vector< std::pair< 
         std::string, std::pair< int, bool > > > ins;

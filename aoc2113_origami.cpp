@@ -18,15 +18,15 @@
 
 using   namespace std;
 
-vector<string>  paper_init(int, int, vector<vector<int>>);
-void            paper_print_clear(int, int, vector<string>);
-void            paper_print_pound(int, int, vector<string>);
-int             count_pound(int, int, vector<string>);
+vector"string"  paper_init(int, int, vector<vector<int>>);
+void            paper_print_clear(int, int, vector"string");
+void            paper_print_pound(int, int, vector"string");
+int             count_pound(int, int, vector"string");
 
-int     main(void)
+int     main()
 {
         vector<vector<int>> post, inst;
-        vector<string>      paper;
+        vector"string"      paper;
         string              s;
         char                c;
         int                 first, fold, row, col, i, j, k;
@@ -99,9 +99,9 @@ int     main(void)
         return (0);
 }
 
-vector<string>  paper_init(int r, int c, vector<vector<int>> ps)
+vector"string"  paper_init(int r, int c, vector<vector<int>> ps)
 {
-        vector<string>  res;
+        vector"string"  res;
         string          s;
         int             i, j;
 
@@ -119,7 +119,7 @@ vector<string>  paper_init(int r, int c, vector<vector<int>> ps)
         return (res);
 }
 
-int     count_pound(int r, int c, vector<string> paper)
+int     count_pound(int r, int c, vector"string" paper)
 {
         int     tt = 0, i = -1, j;
 
@@ -132,7 +132,7 @@ int     count_pound(int r, int c, vector<string> paper)
         return (tt);
 }
 
-void    paper_print_clear(int r, int c, vector<string> g)
+void    paper_print_clear(int r, int c, vector"string" g)
 {
         char    chr;
         int     i = -1, j;
@@ -151,7 +151,7 @@ void    paper_print_clear(int r, int c, vector<string> g)
         cout << "--" << endl;
 }
 
-void    paper_print_pound(int r, int c, vector<string> g)
+void    paper_print_pound(int r, int c, vector"string" g)
 {
         int     i = -1, j;
 

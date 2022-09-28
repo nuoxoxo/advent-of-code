@@ -20,7 +20,7 @@ int     brute_polymer(string, map<string, char>);
 long    polymer(string, map<string, char>, int);
 long    biggest_gap_in_map(map<char, long>);
 
-int     main(void)
+int     main()
 {
         map<string, long>::iterator it;
         map<string, char>           dict;

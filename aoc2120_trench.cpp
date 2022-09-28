@@ -11,11 +11,11 @@
 /*                                                                            */
 /* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <set>
-#include <limits>
-#include <algorithm>
+#include "iostream"
+#include "vector"
+#include "set"
+#include "limits"
+#include "algorithm"
 
 using   namespace std;
 
@@ -28,7 +28,7 @@ int     main(int argc, char *argv[])
         /*  after exhaustive testing M the magic number is 4  */
 
         set<pair<int, int>> G, temp;
-        vector<string>      grid;
+        vector"string"      grid;
         string              A, s;
         int                 N, R, C, r, c, i, twice;
         bool                first = false;

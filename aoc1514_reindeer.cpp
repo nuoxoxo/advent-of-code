@@ -1,21 +1,22 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <utility>
-#include <vector>
-#include <map>
+
+#include "iostream"
+#include "sstream"
+#include "utility"
+#include "vector"
+#include "map"
 
 std::pair<std::string, int> dst_to_win(std::map<std::string, std::vector<int> > reindeer, int time);
 std::pair<std::string, int> pts_to_win(std::map<std::string, std::vector<int> > reindeer, int time);
@@ -24,7 +25,7 @@ int                         distance_covered(std::vector<int> vect, int time);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         const int   time = 2503;
         int         n;

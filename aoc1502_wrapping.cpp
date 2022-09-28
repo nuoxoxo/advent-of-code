@@ -11,13 +11,13 @@
 /*                                                                            */
 /* ****************************************************************** nxu *** */
 
-#include <iostream>
-#include <sstream>
-#include <vector>
+#include "iostream"
+#include "sstream"
+#include "vector"
 
 std::vector<int>	parseSides(std::string s);
 
-int	main(void)
+int	main()
 {
         int             ribbon;
 	int		paper;

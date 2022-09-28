@@ -1,27 +1,28 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <utility>
-#include <vector>
+
+#include "iostream"
+#include "sstream"
+#include "utility"
+#include "vector"
 
 std::pair<long, long>   score(std::vector< std::vector<int> > recipe);
 void                    print(std::vector< std::vector<int> > recipe);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         std::vector< std::vector<int> > recipe;
         std::pair<long, long>           result;

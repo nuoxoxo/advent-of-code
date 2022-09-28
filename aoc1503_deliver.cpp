@@ -11,13 +11,13 @@
 /*                                                                            */
 /* ****************************************************************** nxu *** */
 
-#include <iostream>
-#include <vector>
-#include <utility>	// pair . make_pair
+#include "iostream"
+#include "vector"
+#include "utility"	// pair . make_pair
 
 int	if_exists(std::pair<int, int> pair, std::vector< std::pair<int, int> > path);
 
-int	main(void)
+int	main()
 {
 	std::vector<std::pair<int, int> > path_santa;
 	std::vector<std::pair<int, int> > path_claus;

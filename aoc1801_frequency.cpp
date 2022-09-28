@@ -7,14 +7,14 @@
 /*                                              */
 /* ******************************************** */
 
-#include <iostream>
-#include <vector>
+#include "iostream"
+#include "vector"
 
 int     atoi_here_and_now(std::string s);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         int                 op, fq, t, f, i;
         int                 toggle, count;

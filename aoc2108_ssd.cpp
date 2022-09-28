@@ -19,9 +19,9 @@
 using   namespace std;
 
 int             find_display(string, string);
-vector<string>  sort_segment(string);
+vector"string"  sort_segment(string);
 
-int     main(void)
+int     main()
 {
         string      L, R, s, output, unique;
         int         n, i, j, total, times;
@@ -63,9 +63,9 @@ int     main(void)
 
 int     find_display(string L, string R)
 {
-        vector<string>      len6, len5;
-        vector<string>      right;
-        vector<string>      left;
+        vector"string"      len6, len5;
+        vector"string"      right;
+        vector"string"      left;
         map<string, int>    wire;
         string              seven, five, six, one, s;
         char                TR, RU, RD, LD;
@@ -175,9 +175,9 @@ int     find_display(string L, string R)
         return (res);
 }
 
-vector<string>  sort_segment(string s)
+vector"string"  sort_segment(string s)
 {
-        vector<string>  vect;
+        vector"string"  vect;
         string          str;
         stringstream    ss(s);
 

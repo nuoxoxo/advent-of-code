@@ -11,8 +11,8 @@
 /*                                                                            */
 /* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
+#include "iostream"
+#include "vector"
 
 using   namespace std;
 
@@ -22,7 +22,7 @@ void                mark_DG(vector<vector<int>>&, vector<vector<int>>);
 int                 count_gt1(vector<vector<int>>);
 void                show_grid(vector<vector<int>>);
 
-int     main(void)
+int     main()
 {
         vector<vector<int>>     vent, grid;
 	int                     side, i, j, x, y, HV, DG;

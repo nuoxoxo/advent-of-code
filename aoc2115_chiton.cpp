@@ -16,12 +16,12 @@
 
 //  priority queue ~ heapq
 
-#include <iostream>
-#include <queue>
-#include <utility>
-#include <vector>
-#include <sstream>
-#include <map>
+#include "iostream"
+#include "queue"
+#include "utility"
+#include "vector"
+#include "sstream"
+#include "map"
 
 using   namespace std;
 using   pii = pair<int, int>;
@@ -29,7 +29,7 @@ using   pipii = pair<int, pii>;
 
 int     min_risk(vector<vector<int>> G, int N);
 
-int     main(void)
+int     main()
 {
         vector<vector<int>> G;
         string              s;

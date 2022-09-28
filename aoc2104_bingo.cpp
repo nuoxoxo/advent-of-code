@@ -27,7 +27,7 @@ bool	        check_win(vector<vector<pair<int, int>>>);
 int	        count_score(vector<vector<pair<int, int>>>, int);
 vector<vector<vector<pair<int, int>>>>	make_decks(vector<int>);
 
-int     main(void)
+int     main()
 {
 	vector<vector<vector<pair<int, int>>>>  decks;
 	pair<int, int>				first_and_last;

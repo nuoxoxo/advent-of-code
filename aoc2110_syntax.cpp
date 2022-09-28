@@ -19,18 +19,18 @@
 
 using   namespace std;
 
-vector<long>    solve_2(vector<string>, map<char, char>, map<char, int>);
-int             solve_1(vector<string>, map<char, char>, map<char, int>);
+vector<long>    solve_2(vector"string", map<char, char>, map<char, int>);
+int             solve_1(vector"string", map<char, char>, map<char, int>);
 void            parse_1(string, map<char, int>&, map<char, char>&);
 void            parse_2(string, map<char, int>&);
 long            string_to_long(string, map<char, int>);
 string          stack_to_string(stack<char>);
 
-int     main(void)
+int     main()
 {
         map<char, char> opener;
         map<char, int>  scores1, scores2;
-        vector<string>  subsys;
+        vector"string"  subsys;
         vector<long>    score_vect;
         string          s, scoring1, scoring2;
         char            c;
@@ -60,7 +60,7 @@ int     main(void)
         return (0);
 }
 
-vector<long> solve_2(vector<string> ns, map<char, char> op, map<char, int> sc)
+vector<long> solve_2(vector"string" ns, map<char, char> op, map<char, int> sc)
 {
         map<char, char>::iterator   it;
         vector<long>                score_vect;
@@ -140,7 +140,7 @@ long     string_to_long(string str, map<char, int> sc)
         return (tt);
 }
 
-int     solve_1(vector<string> ns, map<char, char> op, map<char, int> sc)
+int     solve_1(vector"string" ns, map<char, char> op, map<char, int> sc)
 {
         map<char, char>::iterator   it;
         stack<char>                 stack;
