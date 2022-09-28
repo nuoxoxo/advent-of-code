@@ -24,6 +24,7 @@ src	:=	aoc2101_sonar_old.cpp
 src	:=	aoc2102_dive.cpp
 src	:=	aoc2103_binary.cpp
 src	:=	aoc2104_bingo.cpp
+src	:=	aoc2107_crab_brute.cpp
 
 
 bud	:=	$(src:.cpp=.o)
@@ -41,7 +42,8 @@ $(name)	:	$(bud)
 		@#@ ./out < aoc2101.0
 		@#@ ./out < aoc2102.0
 		@#@ ./out < aoc2103.0
-		@ ./out < aoc2104.0
+		@#@ ./out < aoc2104.0
+		@ ./out < aoc2107.0
 		@ make f
 
 
