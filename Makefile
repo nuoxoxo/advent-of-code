@@ -11,15 +11,15 @@
 #*                                                                            *#
 #* ****************************************************************** .py *** *#
 
-comp	:=	c++ -Wall -Werror -Wextra -std=c++98
+# comp	:=	c++ -Wall -Werror -Wextra -std=c++98
 comp	:=	g++ -std=c++11
-#comp	:=	c++ -Wall -Werror -Wextra -std=c++98
 rmv	:=	rm -rf
 name	:=	out
 
-# Modify the src
+### Modify the src
 src	:=	aoc2101_sonar.cpp
 src	:=	aoc2101_sonar_old.cpp
+src	:=	aoc2102_dive.cpp
 
 
 
@@ -30,11 +30,11 @@ bud	:=	$(src:.cpp=.o)
 		@ echo "compiling [$^] "
 		@ $(comp) -c $^ -o $@
 
-# Modify the last line
+### Modify the last line
 $(name)	:	$(bud)
 		@ echo "compiling [$@] "
 		@ $(comp) $^ -o $@
-		@ ./out < aoc2101_sonar.0
+		@ ./out < aoc2102_dive.0
 		@ make f
 
 all	:	$(name)
