@@ -19,6 +19,7 @@ name	:=	out
 
 # Modify the src
 src	:=	aoc2101_sonar.cpp
+src	:=	aoc2101_sonar_old.cpp
 
 
 

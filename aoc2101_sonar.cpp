@@ -16,7 +16,7 @@
 
 using   namespace std;
 
-int     main(void)
+int     main()
 {
         vector<int>	D;
         int         	p1 = 0;

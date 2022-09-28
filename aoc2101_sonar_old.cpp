@@ -17,7 +17,7 @@
 int	count_single(std::vector<int>);
 int	count_triple(std::vector<int>);
 
-int	main(void)
+int	main()
 {
 	std::vector<int>	size;
 	int			dep, single, triple;
@@ -30,6 +30,8 @@ int	main(void)
 	std::cout << "Star 1: " << single << std::endl;
 	std::cout << "Star 2: " << triple << std::endl;
 }
+
+//
 
 int	count_triple(std::vector<int> dp)
 {
