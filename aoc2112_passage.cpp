@@ -18,19 +18,19 @@
 #include "iostream"
 
 using   namespace std;
-using   adj = map<string, vector<string>>;
+using   adj = map<string, vector"string">;
 using   msi = map<string, int>;
 
-void    DFS1(string, adj, msi, long&, vector<string>);
-void    DFS2(string, adj, msi, long&, vector<string>);
-void    print_path(vector<string>, long);
+void    DFS1(string, adj, msi, long&, vector"string");
+void    DFS2(string, adj, msi, long&, vector"string");
+void    print_path(vector"string", long);
 
-int     main(void)
+int     main()
 {
         string  s;
         long    part1, part2;
         msi     visited;
-        vector<string>  path;
+        vector"string"  path;
         adj     E;
 
         //  parsing
@@ -58,7 +58,7 @@ int     main(void)
         return (0);
 }
 
-void    DFS2(string node, adj E, msi V, long& n, vector<string> path)
+void    DFS2(string node, adj E, msi V, long& n, vector"string" path)
 {
         int     gt1 = 0, i = -1;
 
@@ -106,7 +106,7 @@ void    DFS2(string node, adj E, msi V, long& n, vector<string> path)
         V[node]--; // attempt finished, backtrack
 }
 
-void    DFS1(string node, adj E, msi V, long& n, vector<string> path)
+void    DFS1(string node, adj E, msi V, long& n, vector"string" path)
 {
         int     i = -1;
 
@@ -125,7 +125,7 @@ void    DFS1(string node, adj E, msi V, long& n, vector<string> path)
         V[node]--;
 }
 
-void    print_path(vector<string> pa, long n)
+void    print_path(vector"string" pa, long n)
 {
         int     i = -1;
 

@@ -1,27 +1,28 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <limits>
-#include <map>
+
+#include "iostream"
+#include "vector"
+#include "limits"
+#include "map"
 
 //  DRIVE
 
 std::vector< int >  redistribute(std::vector<int> vec);
 void                put_int_vect(std::vector<int> vec);
 
-int     main(void)
+int     main()
 {
         int seen_first, seen_again, i, found, count;
         std::map<std::vector<int>, int> cycles;

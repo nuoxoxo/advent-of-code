@@ -1,23 +1,24 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <utility>
-#include <vector>
-#include <bitset>
-#include <map>
-#include <set>
+
+#include "iostream"
+#include "sstream"
+#include "utility"
+#include "vector"
+#include "bitset"
+#include "map"
+#include "set"
 
 std::vector< std::string >  find_all_perm_binstr(int n);
 std::set< long >            apply_mask_on_binstr(std::string m, std::string s);
@@ -27,7 +28,7 @@ long                        bin_to_long(std::string s);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         std::map<long, long>::iterator  itmap;
         std::map<long, long>            mem_1;

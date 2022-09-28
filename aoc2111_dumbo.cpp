@@ -25,7 +25,7 @@ bool    check_sim(vector<vector<int>>);
 void    increment(vector<vector<int>>&);
 void    visualize(vector<vector<int>>, int, int);
 
-int     main(void)
+int     main()
 {
         vector<vector<int>> grid;
         string              s;

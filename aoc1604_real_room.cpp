@@ -1,22 +1,23 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <utility>
+
+#include "iostream"
+#include "sstream"
+#include "string"
+#include "vector"
+#include "algorithm"
+#include "utility"
 
 std::vector <std::pair<char, int> 
             >sort_vect_of_pairs(std::vector<std::pair<char, int> > v);
@@ -26,7 +27,7 @@ int         find_north_pole_object_store(std::string s);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         std::vector<std::vector<std::string> >
                                     encrypted_name;

@@ -22,7 +22,7 @@ using   namespace std;
 
 void    get_range(int& L, int& R);
 
-int     main(void)
+int     main()
 {
         set<tuple<int, int, int>>   S;
         string                      O, T; // on/off, tuple str

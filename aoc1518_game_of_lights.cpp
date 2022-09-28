@@ -1,33 +1,34 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
+
+#include "iostream"
+#include "vector"
 
 using namespace std;
 
 //  DRIVE
 
-vector<string>  life_of_four(vector<string> grid, vector<vector<int>> neighbors, int steps);
-vector<string>  game_of_life(vector<string> grid, vector<vector<int>> neighbors, int steps);
-int             count_live_neighbors(vector<string> s, vector<vector<int>> n, int p, int q);
-int             count_lights(vector<string> state);
-void            print_state(vector<string> a, int b);
+vector"string"  life_of_four(vector"string" grid, vector<vector<int>> neighbors, int steps);
+vector"string"  game_of_life(vector"string" grid, vector<vector<int>> neighbors, int steps);
+int             count_live_neighbors(vector"string" s, vector<vector<int>> n, int p, int q);
+int             count_lights(vector"string" state);
+void            print_state(vector"string" a, int b);
 
-int     main(void)
+int     main()
 {
         vector<vector<int>> neighbors;
-        vector<string>      grid, game, life;
+        vector"string"      grid, game, life;
         string              s;
         int                 steps;
 
@@ -47,9 +48,9 @@ int     main(void)
 
 //
 
-vector<string>  life_of_four(vector<string> grid, vector<vector<int>> n, int steps)
+vector"string"  life_of_four(vector"string" grid, vector<vector<int>> n, int steps)
 {
-        vector<string>  state;
+        vector"string"  state;
         int             alive, e;
 
         while (steps)
@@ -76,9 +77,9 @@ vector<string>  life_of_four(vector<string> grid, vector<vector<int>> n, int ste
         return (grid);
 }
 
-vector<string>  game_of_life(vector<string> grid, vector<vector<int>> n, int steps)
+vector"string"  game_of_life(vector"string" grid, vector<vector<int>> n, int steps)
 {
-        vector<string>  state;
+        vector"string"  state;
         int             alive;
 
         while (steps)
@@ -103,7 +104,7 @@ vector<string>  game_of_life(vector<string> grid, vector<vector<int>> n, int ste
         return (grid);
 }
 
-int     count_live_neighbors(vector<string> s, vector<vector<int>> n, int p, int q)
+int     count_live_neighbors(vector"string" s, vector<vector<int>> n, int p, int q)
 {
         int     x, y, total;
 
@@ -120,7 +121,7 @@ int     count_live_neighbors(vector<string> s, vector<vector<int>> n, int p, int
         return (total);
 }
 
-int     count_lights(vector<string> s)
+int     count_lights(vector"string" s)
 {
         int     total = 0;
 
@@ -131,7 +132,7 @@ int     count_lights(vector<string> s)
         return (total);
 }
 
-void    print_state(vector<string> state, int steps)
+void    print_state(vector"string" state, int steps)
 {
         for (int i = 0; i < state.size(); i++) cout << state[i] << endl;
         cout << endl << steps << endl;

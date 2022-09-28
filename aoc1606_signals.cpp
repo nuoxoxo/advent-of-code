@@ -1,20 +1,21 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <utility> // pair + make_pair
-#include <vector>
-#include <limits> // std::numeric_limits<int>::max()
+
+#include "iostream"
+#include "utility" // pair + make_pair
+#include "vector"
+#include "limits" // std::numeric_limits<int>::max()
 
 //  DRIVE
 
@@ -22,7 +23,7 @@ char    mfoc(std::vector< char > a); // most frequently occurring char
 char    lfoc(std::vector< char > a); // least frequently occurring char
 int     slen(std::string s);
 
-int     main(void)
+int     main()
 {
         std::vector< std::vector< char > >  arr;
         std::string                         err_corr_message;

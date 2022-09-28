@@ -1,21 +1,22 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <sstream>
-#include <utility>
-#include <string>
+
+#include "iostream"
+#include "vector"
+#include "sstream"
+#include "utility"
+#include "string"
 
 std::vector< std::pair< std::string, std::string> >
         make_person(std::string line);
@@ -27,7 +28,7 @@ bool    is_haircolor(std::string s);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         std::vector< std::vector< std::pair< std::string, std::string > > > pax;
         std::vector< std::pair< std::string, std::string > > person;

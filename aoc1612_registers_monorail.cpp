@@ -1,29 +1,30 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <vector>
-#include <map>
+
+#include "iostream"
+#include "sstream"
+#include "vector"
+#include "map"
 
 using namespace std;
 
-void    end_game(vector<string> inst, map<char, int>& game);
+void    end_game(vector"string" inst, map<char, int>& game);
 
-int     main(void)
+int     main()
 {
         map<char, int>  game;
-        vector<string>  inst;
+        vector"string"  inst;
         string          s;
         int             a;
 
@@ -39,7 +40,7 @@ int     main(void)
         return (0);
 }
 
-void    end_game(vector<string> inst, map<char, int>& game)
+void    end_game(vector"string" inst, map<char, int>& game)
 {
     string  temp, code;
     char    from, to;

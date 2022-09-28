@@ -18,7 +18,7 @@ using	namespace std;
 
 int     find_pos(vector<pair<int, int>>);
 
-int	main(void)
+int	main()
 {
         vector<pair<int, int>>  E;
         string                  s;

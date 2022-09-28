@@ -11,11 +11,11 @@
 /*                                                                            */
 /* ****************************************************************** nuo *** */
 
-#include <iostream>
+#include "iostream"
 
 using   namespace std;
 
-int     main(void)
+int     main()
 {
         string      s;
         bool        hit;

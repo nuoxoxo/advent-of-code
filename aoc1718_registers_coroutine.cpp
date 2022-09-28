@@ -1,35 +1,36 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <vector>
-#include <queue>
-#include <map>
+
+#include "iostream"
+#include "sstream"
+#include "vector"
+#include "queue"
+#include "map"
 
 using namespace std;
 
 long    get_value(map<char, long>& game, string s);
-int     coroutine(vector<string> instructions);
-int     recover(vector<string> instructions);
+int     coroutine(vector"string" instructions);
+int     recover(vector"string" instructions);
 bool    receive(int& count, int& index, queue<long>& native, queue<long>& remote,
-        map<char, long>& game, vector<string> instructions);
+        map<char, long>& game, vector"string" instructions);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
-        vector<string>  instructions;
+        vector"string"  instructions;
         string          s;
         int             first_rcv, program_1;
 
@@ -44,7 +45,7 @@ int     main(void)
 
 ///
 
-int     coroutine(vector<string> instructions)
+int     coroutine(vector"string" instructions)
 {
         map<char, long> ga, go;
         queue<long>     qa, qo;
@@ -64,7 +65,7 @@ int     coroutine(vector<string> instructions)
 }
 
 bool    receive(int& count, int& i, queue<long>& native, queue<long>& remote,
-        map<char, long>& game, vector<string> inst)
+        map<char, long>& game, vector"string" inst)
 {
         string      temp, code;
         long        send, n;
@@ -103,7 +104,7 @@ bool    receive(int& count, int& i, queue<long>& native, queue<long>& remote,
         return (true);
 }
 
-int     recover(vector<string> instructions)
+int     recover(vector"string" instructions)
 {
         map<char, long> game;
         string          temp, code;

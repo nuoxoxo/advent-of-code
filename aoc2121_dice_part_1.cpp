@@ -11,13 +11,13 @@
 /*                                                                            */
 /* ****************************************************************** nuo *** */
 
-#include <iostream>
+#include "iostream"
 
 using   namespace std;
 
 long    dice(int& D);
 
-int     main(void)
+int     main()
 {
         string  s;
         long    A, B, p1, p2;

@@ -21,7 +21,7 @@ using   namespace std;
 void    printG(vector<vector<char>>);
 int     part1(vector<vector<char>>);
 
-int     main(void)
+int     main()
 {
         vector<vector<char>>    G;
         string                  s;
