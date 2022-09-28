@@ -16,21 +16,24 @@
 
 using   namespace std;
 
-int     main(void)
+int     main()
 {
-        vector<int> D;
-        int         p1 = 0, p2 = 0, i;
+        vector<int>	D;
+        int         	p1 = 0;
+	int		p2 = 0;
+	int		i;
 
-        while (cin>>i)  D.push_back(i);
+        while (cin >> i)
+		D.push_back(i);
         i = -1;
-        while (++i<D.size())
+        while (++i < D.size())
         {
-            if (i>0 && D[i]>D[i-1]) ++p1;
-            if (i>2 && D[i]+D[i-1]+D[i-2]>D[i-1]+D[i-2]+D[i-3]) ++p2;
-        }
-
-        cout << "Star 1: " << p1 << endl;
-        cout << "Star 2: " << p2 << endl;
-
-        return (0);
+		if (i > 0 && D[i] > D[i - 1])
+			++p1;
+		if (i > 2 && D[i] + D[i - 1] + D[i - 2] >
+			D[i - 1] + D[i - 2] + D[i - 3])
+			++p2;
+	}
+	cout << "Star 1: " << p1 << endl;
+	cout << "Star 2: " << p2 << endl;
 }
