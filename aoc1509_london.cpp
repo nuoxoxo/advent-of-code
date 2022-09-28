@@ -1,21 +1,22 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <utility>
-#include <vector>
-#include <map>
+
+#include "iostream"
+#include "sstream"
+#include "utility"
+#include "vector"
+#include "map"
 
 std::vector< int >  all_dist(
         std::vector< std::vector< std::string > > routes,
@@ -27,7 +28,7 @@ void    show_int_vect( std::vector< int > v);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         std::map< std::pair< std::string, std::string >, int > intervals;
         std::vector< std::vector< std::string > > routes;

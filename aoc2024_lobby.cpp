@@ -17,7 +17,7 @@
 
 using   namespace std;
 
-int     main(void)
+int     main()
 {
         set<pair<int, int>> L;
         pair<int, int>      p;

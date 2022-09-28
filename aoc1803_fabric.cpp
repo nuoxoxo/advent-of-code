@@ -1,20 +1,21 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <utility>  // std::pair, std::make_pair
-#include <vector>
+
+#include "iostream"
+#include "sstream"
+#include "utility"  // std::pair, std::make_pair
+#include "vector"
 
 int     findID(std::vector<std::vector<int> > grid,
         std::vector<std::pair<std::pair<int, int>, std::pair<int, int> > > v);
@@ -26,7 +27,7 @@ extern const int                LEN = 1000;
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         int                         i, x, y;
         std::string                 word;

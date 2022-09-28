@@ -24,7 +24,7 @@ long    mapsum(map<int, long>);
 
 //      dp part 1 + 2
 
-int     main(void)
+int     main()
 {
         map<int, long>  life;
         string          s;
@@ -90,7 +90,7 @@ void    show_lifesize(map<int, long> life)
 
 void    debug(vector<int> vc);
 
-int     main(void)
+int     main()
 {
         vector<int>     life;
         string          s;

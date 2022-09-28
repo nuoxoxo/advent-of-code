@@ -11,20 +11,20 @@
 /*                                                                            */
 /* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <set>
+#include "iostream"
+#include "vector"
+#include "set"
 
 using   namespace std;
 
-void    DFS(vector<string>, set<pair<int, int>>&, int, int, char);
-bool    isLP(vector<string>, int, int);
-void    view_grid(vector<string> bsn);
+void    DFS(vector"string", set<pair<int, int>>&, int, int, char);
+bool    isLP(vector"string", int, int);
+void    view_grid(vector"string" bsn);
 
-int     main(void)
+int     main()
 {
         vector<pair<int, int>>  lopt;
-        vector<string>          grid;
+        vector"string"          grid;
         vector<int>             size;
         set<pair<int, int>>     been;
         pair<int, int>          p;
@@ -64,7 +64,7 @@ int     main(void)
         return (0);
 }
 
-void    DFS(vector<string> g, set<pair<int, int>>& b, int x, int y, char prev)
+void    DFS(vector"string" g, set<pair<int, int>>& b, int x, int y, char prev)
 {
         pair<char, char>    p;
         int                 i, rend, bend; // right end, bottom end
@@ -84,7 +84,7 @@ void    DFS(vector<string> g, set<pair<int, int>>& b, int x, int y, char prev)
         DFS(g, b, x, y - 1, prev);
 }
 
-bool    isLP(vector<string> p, int i, int j)
+bool    isLP(vector"string" p, int i, int j)
 {
         char        L, R, U, D, C;
 
@@ -97,7 +97,7 @@ bool    isLP(vector<string> p, int i, int j)
         return (false);
 }
 
-void    view_grid(vector<string> bsn)
+void    view_grid(vector"string" bsn)
 {
         string      s = " .:-=+*#%@"; // grey scale
         int         i, j;

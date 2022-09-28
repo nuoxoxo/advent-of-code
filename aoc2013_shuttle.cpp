@@ -19,7 +19,7 @@ using   namespace std;
 long    part2(long, string);
 int     part1(long, string);
 
-int     main(void)
+int     main()
 {
         string      B;
         long        T;

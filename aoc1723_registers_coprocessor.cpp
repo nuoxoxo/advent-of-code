@@ -1,33 +1,34 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <sstream>
-#include <vector>
-#include <map>
+
+#include "iostream"
+#include "sstream"
+#include "vector"
+#include "map"
 
 using   namespace std;
 
 long    get_value(map<char, long> game, string temp);
-int     count_mul(vector<string> instructions);
-long    cal_reg_h(vector<string> instructions); // obsolete
+int     count_mul(vector"string" instructions);
+long    cal_reg_h(vector"string" instructions); // obsolete
 long    finding_h(void);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
-        vector<string>  instructions;
+        vector"string"  instructions;
         string          s;
         long            H;
         int             C;
@@ -71,7 +72,7 @@ long    finding_h(void)
         return (h);
 }
 
-long    cal_reg_h(vector<string> inst)  // takes too long
+long    cal_reg_h(vector"string" inst)  // takes too long
 {
         map<char, long> game;
         string          code, s;
@@ -110,7 +111,7 @@ long    cal_reg_h(vector<string> inst)  // takes too long
         return (game['h']);
 }
 
-int     count_mul(vector<string> inst)
+int     count_mul(vector"string" inst)
 {
         map<char, long> game;
         string          code, s;

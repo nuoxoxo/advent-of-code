@@ -1,22 +1,23 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <algorithm> //  find
-#include <utility>  //  pair, make_pair
-#include <vector>
-#include <sstream>
-#include <string>   //  getline
+
+#include "iostream"
+#include "algorithm" //  find
+#include "utility"  //  pair, make_pair
+#include "vector"
+#include "sstream"
+#include "string"   //  getline
 
 using namespace std;
 
@@ -24,16 +25,16 @@ pair<string, string> find_prev \
         (vector< pair<string, string> > a, string s);
 int     count_orbits \
         (vector< pair<string, string> > a, string s, string t, int n);
-int     seen(vector<string> unique, string s);
+int     seen(vector"string" unique, string s);
 
 //  DRIVE
 
-int     main(void)
+int     main()
 {
         vector< pair<string, string> >  orbits;
-        vector<string>                  unique;
-        vector<string>                  path_of_you;
-        vector<string>                  path_of_san;
+        vector"string"                  unique;
+        vector"string"                  path_of_you;
+        vector"string"                  path_of_san;
         string                          s;
         int                             count_all_orbits = 0;
 
@@ -117,7 +118,7 @@ int     count_orbits(vector< pair<string, string> > arr, string second, string t
         return (count_orbits(arr, temp.first, target, n));
 }
 
-int     seen(vector<string> arr, string s)
+int     seen(vector"string" arr, string s)
 {
         if (find(arr.begin(), arr.end(), s) != arr.end())
             return (1);

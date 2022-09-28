@@ -20,7 +20,7 @@ using   namespace std;
 
 int     move(int);
 
-int     main(void)
+int     main()
 {
         vector<int> post;
         string      s;

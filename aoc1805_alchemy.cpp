@@ -1,19 +1,20 @@
-/* ******************************************** */
-/*                                              */
-/*              \\             /`/``            */
-/*              ~\o o_       0 0\               */
-/*              / \__)      (u  ); _  _         */
-/*       / \/ \/  /           \  \/ \/ \        */
-/*      /(   . . )            (         )\      */
-/*     /  \_____/              \_______/  \     */
-/*         []  []               [[] [[]    *.   */
-/*         []] []]              [[] [[]         */
-/*                                              */
-/* ************************************ nuo *** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                            \\             /`/``                            */
+/*                            ~\o o_       0 0\                               */
+/*                            / \__)      (u  ); _  _                         */
+/*                     / \/ \/  /           \  \/ \/ \                        */
+/*                    /(   . . )            (         )\                      */
+/*                   /  \_____/              \_______/  \                     */
+/*                       []  []               [[] [[]    *.                   */
+/*                       []] []]              [[] [[]                         */
+/*                                                                            */
+/* ****************************************************************** nuo *** */
 
-#include <iostream>
-#include <vector>
-#include <limits>   // int  n = std::numeric_limits<double>::infinity();
+
+#include "iostream"
+#include "vector"
+#include "limits"   // int  n = std::numeric_limits<double>::infinity();
 // double n = std::numeric_limits<int>::max(); <----- use max() for <int>
 
 //  DRIVE
@@ -22,7 +23,7 @@ int     count_remaining_units(std::vector<char> arr);
 int     count_polymer(int c, std::vector<char> arr);
 void    show_array(std::vector<char> arr);
 
-int     main(void)
+int     main()
 {
         std::vector<char>   arr;
         char                c;
