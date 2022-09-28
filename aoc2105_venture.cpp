@@ -91,8 +91,10 @@ void    mark_DG(vector<vector<int>>& grid, vector<vector<int>> v)
                 begin_y = v[i][1];
                 until_x = v[i][2];
                 until_y = v[i][3];
-                if (begin_x > until_x)  dx = -dx;
-                if (begin_y > until_y)  dy = -dy;
+                if (begin_x > until_x)
+			dx = -dx;
+                if (begin_y > until_y)
+			dy = -dy;
                 while (begin_x != until_x + dx)
                 {
                     grid[begin_x][begin_y]++;
@@ -114,32 +116,38 @@ void    mark_HV(vector<vector<int>>& grid, vector<vector<int>> v)
             {
                 start = v[i][1];
                 finish = v[i][3];
-                if (start > finish)     swap(start, finish);
+                if (start > finish)
+			swap(start, finish);
                 j = start - 1;
-                while (++j <= finish)   grid[ v[i][0] ][j]++;
+                while (++j <= finish)
+			grid[ v[i][0] ][j]++;
             }
             else if (v[i][1] == v[i][3])
             {
                 start = v[i][0];
                 finish = v[i][2];
-                if (start > finish)     swap(start, finish);
+                if (start > finish)
+			swap(start, finish);
                 j = start - 1;
-                while (++j <= finish)   grid[j][ v[i][1] ]++;
+                while (++j <= finish)
+			grid[j][ v[i][1] ]++;
             }
         }
 }
 
 vector<vector<int>> make_grid(int side)
 {
-        vector<vector<int>> grid;
-        int                 i, j;
+        vector<vector<int>>	grid;
+        int                	i, j;
 
         i = -1;
         while (++i < side)
         {
             vector<int>    temp;
+
             j = -1;
-            while(++j < side)   temp.push_back(0);
+            while(++j < side)
+		    temp.push_back(0);
             grid.push_back(temp);
         }
 
@@ -190,8 +198,10 @@ void    show_grid(vector<vector<int>> grid)
             j = -1;
             while (++j < grid[i].size())
             {
-                if (!grid[i][j])    cout << '.';
-                else                cout << grid[i][j];
+                if (!grid[i][j])
+			cout << '.';
+                else
+			cout << grid[i][j];
             }
             cout << endl;
         }
