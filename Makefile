@@ -23,6 +23,7 @@ src	:=	aoc2101_sonar.cpp
 src	:=	aoc2101_sonar_old.cpp
 src	:=	aoc2102_dive.cpp
 src	:=	aoc2103_binary.cpp
+src	:=	aoc2104_bingo.cpp
 
 
 bud	:=	$(src:.cpp=.o)
@@ -36,10 +37,11 @@ bud	:=	$(src:.cpp=.o)
 $(name)	:	$(bud)
 		@#@ echo "compiling [$@] "
 		@ $(comp) $^ -o $@
-		@#@ ./out < aoc2101_sonar.0
-		@#@ ./out < aoc2101_sonar_old.0
-		@#@ ./out < aoc2102_dive.0
-		@ ./out < aoc2103_binary.0
+		@#@ ./out < aoc2101.0
+		@#@ ./out < aoc2101.0
+		@#@ ./out < aoc2102.0
+		@#@ ./out < aoc2103.0
+		@ ./out < aoc2104.0
 		@ make f
 
 
