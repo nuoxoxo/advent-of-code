@@ -18,18 +18,18 @@
 
 using   namespace std;
 
+
 pair<int, int>	couple(vector<vector<vector<pair<int, int>>>>, vector<int>);
 void            print_sample(vector<vector<vector<pair<int, int>>>>);
-void	        check_num(vector<vector<pair<int, int>>>&, int);
+void	        check_num(vector<vector<pair<int, int>>> &, int);
 bool	        check_col(vector<vector<pair<int, int>>>);
 bool	        check_row(vector<vector<pair<int, int>>>);
 bool	        check_win(vector<vector<pair<int, int>>>);
 int	        count_score(vector<vector<pair<int, int>>>, int);
-vector<vector<vector<pair<int, int>>>>	make_decks(vector<int>);
 
 int     main()
 {
-	vector<vector<vector<pair<int, int>>>>  decks;
+	vector<vector<vector<pair<int, int>>>>	decks;
 	pair<int, int>				first_and_last;
 	vector<int>				call, nums;
 	string					s;
@@ -37,16 +37,16 @@ int     main()
 
 	cin >> s;
 	stringstream    ss(s);
-	while ( getline(ss, s, ',') )   call.push_back(stoi(s));
-	while (cin >> n)                nums.push_back(n);
-	decks = make_decks(nums);
-	//print_sample(decks); // test
-	first_and_last = couple(decks, call);
 
+	while (getline(ss, s, ','))
+		call.push_back(stoi(s));
+	while (cin >> n)
+		nums.push_back(n);
+	decks = make_decks(nums);
+	//print_sample(decks); /// test
+	first_and_last = couple(decks, call);
 	cout << "Star 1: " << first_and_last.first << endl;
 	cout << "Star 2: " << first_and_last.second << endl;
-
-	return (0);
 }
 
 //	
@@ -71,7 +71,10 @@ pair<int, int>	couple(vector<vector<vector<pair<int, int>>>> decks, vector<int> 
 		    L = count_score(decks[j], call[i]);
                     k = -1;
                     while (++k < decks_won.size())
-                        if (decks_won[k].first == j)    break;
+		    {
+			    if (decks_won[k].first == j)
+				    break ;
+		    }
                     if (k == decks_won.size())
                     {
                         decks_won.push_back(make_pair(j, call[i]));
@@ -87,7 +90,7 @@ pair<int, int>	couple(vector<vector<vector<pair<int, int>>>> decks, vector<int> 
 
 int	count_score(vector<vector<pair<int, int>>> deck, int caller)
 {
-	int	um, i, j;
+	int		um, i, j;
 
 	um = 0;
 	i = -1;
@@ -95,33 +98,40 @@ int	count_score(vector<vector<pair<int, int>>> deck, int caller)
 	{
             j = -1;
             while (++j < (int) deck[i].size())
-                if (!deck[i][j].second)	um += deck[i][j].first;
+	    {
+		    if (!deck[i][j].second)
+			    um += deck[i][j].first;
+	    }
 	}
 	return (caller * um);
 }
 
 void	check_num(vector<vector<pair<int, int>>>& deck, int caller)
 {
-	int	i, j;
+	int		i, j;
 
 	i = -1;
 	while (++i < (int) deck.size())
 	{
             j = -1;
             while (++j < (int) deck[i].size())
-                if (caller == deck[i][j].first) deck[i][j].second++;
+	    {
+		    if (caller == deck[i][j].first)
+			deck[i][j].second++;
+	    }
 	}
 }
 
 bool	check_win(vector<vector<pair<int, int>>> deck)
 {
-	if (check_row(deck) || check_col(deck))	return (true);
+	if (check_row(deck) || check_col(deck))
+		return (true);
 	return (false);
 }
 
 bool	check_col(vector<vector<pair<int, int>>> deck)
 {
-	int	ye, r, c;
+	int		ye, r, c;
 
 	c = -1;
 	while (++c < (int) deck[0].size())
@@ -129,15 +139,21 @@ bool	check_col(vector<vector<pair<int, int>>> deck)
             ye = 0;
             r = -1;
             while (++r < (int) deck[0].size())
-                if (deck[r][c].second)	++ye;
-            if (ye == (int) deck[0].size()) return (true);
+	    {
+		    if (deck[r][c].second)
+			    ++ye;
+	    }
+            if (ye == (int) deck[0].size())
+	    {
+		    return (true);
+	    }
         }
 	return (false);
 }
 
 bool	check_row(vector<vector<pair<int, int>>> deck)
 {
-	int     ye, r, c;
+	int		ye, r, c;
 
 	r = -1;
 	while (++r < (int) deck.size())
@@ -145,8 +161,12 @@ bool	check_row(vector<vector<pair<int, int>>> deck)
             ye = 0;
             c = -1;
 	    while (++c < (int) deck[r].size())
-                if (deck[r][c].second)	++ye;
-            if (ye == (int) deck[r].size()) return (true);
+	    {
+		    if (deck[r][c].second)
+			    ++ye;
+	    }
+            if (ye == (int) deck[r].size())
+		    return (true);
 	}
 	return (false);
 }
@@ -178,8 +198,9 @@ vector<vector<vector<pair<int, int>>>>	make_decks(vector<int> nums)
 
 void	print_sample(vector<vector<vector<pair<int, int>>>> decks)
 {
-	int z = (int) decks.size() - 1;
+	int		z;
 
+	z = (int) decks.size() - 1;
 	cout << "--" << endl;
 	cout << "(bug check)\n" << endl;
 	cout << "how many decks: " << z + 1 << endl;
