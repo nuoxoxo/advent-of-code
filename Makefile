@@ -25,6 +25,7 @@ src	:=	aoc2102_dive.cpp
 src	:=	aoc2103_binary.cpp
 src	:=	aoc2104_bingo.cpp
 src	:=	aoc2107_crab_brute.cpp
+src	:=	aoc2107_crab.cpp
 
 
 bud	:=	$(src:.cpp=.o)
