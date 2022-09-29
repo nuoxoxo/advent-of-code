@@ -19,13 +19,13 @@ using   namespace std;
 int     main()
 {
         vector<int>	D;
+	int		i;
         int         	p1 = 0;
 	int		p2 = 0;
-	int		i;
 
         while (cin >> i)
 		D.push_back(i);
-        i = -1;
+        i = 0;
         while (++i < D.size())
         {
 		if (i > 0 && D[i] > D[i - 1])
