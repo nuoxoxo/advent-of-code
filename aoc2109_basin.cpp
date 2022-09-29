@@ -31,7 +31,8 @@ int     main()
         string                  s;
         int                     risk, i, j, big3;
 
-        while (cin >> s)    grid.push_back(s);
+        while (cin >> s)
+		grid.push_back(s);
         risk = 0;
         i = -1;
         while (++i < grid.size())
@@ -56,12 +57,10 @@ int     main()
         }
         sort(size.rbegin(), size.rend());
         big3 = size[0] * size[1] * size[2];
-
         view_grid(grid);
+
         cout << "Star 1: " << risk << endl;
         cout << "Star 2: " << big3 << endl;
-
-        return (0);
 }
 
 void    DFS(vector"string" g, set<pair<int, int>>& b, int x, int y, char prev)
@@ -93,7 +92,8 @@ bool    isLP(vector"string" p, int i, int j)
         L = j < 1 ? '9' : p[i][j - 1];
         D = i > p.size() - 2 ? '9' : p[i + 1][j];
         R = j > p[0].length() - 2 ? '9' : p[i][j + 1]; 
-        if (C < L && C < R && C < U && C < D)   return (true);
+        if (C < L && C < R && C < U && C < D)
+		return (true);
         return (false);
 }
 
@@ -107,7 +107,8 @@ void    view_grid(vector"string" bsn)
         while (++i < bsn.size())
         {
             j = -1;
-            while (++j < bsn[i].size()) cout << s[ bsn[i][j] - '0' ];
+            while (++j < bsn[i].size())
+		    cout << s[ bsn[i][j] - '0' ];
             cout << endl;
         }
 }
