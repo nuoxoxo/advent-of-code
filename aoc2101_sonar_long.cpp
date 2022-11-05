@@ -1,61 +1,56 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                            \\             /`/``                            */
-/*                            ~\o o_       0 0\                               */
-/*                            / \__)      (u  ); _  _                         */
-/*                     / \/ \/  /           \  \/ \/ \                        */
-/*                    /(   . . )            (         )\                      */
-/*                   /  \_____/              \_______/  \                     */
-/*                       []  []               [[] [[]    *.                   */
-/*                       []] []]              [[] [[]                         */
-/*                                                                            */
-/* ****************************************************************** nuo *** */
+#include <iostream>
+#include <vector>
 
-#include "iostream"
-#include "vector"
+using	namespace std;
 
-int	count_single(std::vector<int>);
-int	count_triple(std::vector<int>);
+int	single(vector<int>);
+int	triple(vector<int>);
 
-int	main()
+int	main(void)
 {
-	std::vector<int>	size;
-	int			dep, single, triple;
+	vector<int>	dp;
+	int		d, r1, r2;
 
-	while (std::cin >> dep)
-		size.push_back(dep);
-	single = count_single(size);
-	triple = count_triple(size);
-
-	std::cout << "Star 1: " << single << std::endl;
-	std::cout << "Star 2: " << triple << std::endl;
+	while (std::cin >> d)
+		dp.push_back(d);
+	r1 = single(dp);
+	r2 = triple(dp);
+	cout << "Star 1: " << r1 << endl;
+	cout << "Star 2: " << r2 << endl;
 }
 
 //
 
-int	count_triple(std::vector<int> dp)
+int	triple(std::vector<int> dp)
 {
-	int		count, last3, curr3, i;
+	int	count;
+	int	last3;
+	int	curr3;
+	int	i;
 
 	last3 = dp[0] + dp[1] + dp[2];
-	i = count = 0;
+	count = 0;
+	i = 0;
 	while (++i < (int) dp.size() - 2)
 	{
 		curr3 = dp[i] + dp[i + 1] + dp[i + 2];
 		if (curr3 > last3)
-			++ count;
+			++count;
 		last3 = curr3;
 	}
+
 	return (count);
 }
 
-int	count_single(std::vector<int> dp)
+int	single(std::vector<int> dp)
 {
-	int		count, i;
+	int	count;
+	int	i;
 
-	count = i = 0;
+	i = 0;
+	count = 0;
 	while (++i < (int) dp.size())
 		if (dp[i] > dp[i - 1])
-			++ count;
+			++count;
 	return (count);
 }
