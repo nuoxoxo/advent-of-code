@@ -4,6 +4,7 @@
 !*.cpp
 !*.java
 !*.py
+!*.pypy
 !*.md
 !*.sh
 !*.js
