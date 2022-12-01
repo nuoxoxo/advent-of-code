@@ -13,7 +13,14 @@ with open('2201.0') as file:
         else:
             n += int(line)
 
-print("Star 1:", max(cl))
+cl.sort()
+print("Star 1:", cl[-1])
+print("Star 2:", cl[-1] + cl[-2] + cl[-3])
 
+# before cleanup
+
+"""
+print("Star 1:", max(cl))
 cl.sort(reverse=True)
 print("Star 2:", cl[0] + cl[1] + cl[2])
+"""
