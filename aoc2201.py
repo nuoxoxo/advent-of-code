@@ -15,7 +15,7 @@ with open('2201.0') as file:
 
 cl.sort()
 print("Star 1:", cl[-1])
-print("Star 2:", cl[-1] + cl[-2] + cl[-3])
+print("Star 2:", sum(cl[-3:]))
 
 # before cleanup
 
