@@ -1,40 +1,24 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                            \\             /`/``                            */
-/*                            ~\o o_       0 0\                               */
-/*                            / \__)      (u  ); _  _                         */
-/*                     / \/ \/  /           \  \/ \/ \                        */
-/*                    /(   . . )            (         )\                      */
-/*                   /  \_____/              \_______/  \                     */
-/*                       []  []               [[] [[]    *.                   */
-/*                       []] []]              [[] [[]                         */
-/*                                                                            */
-/* ****************************************************************** nuo *** */
-
 #include "iostream"
 #include "vector"
 #include "string"
 
-//  DRIVE
-
 int     tree(std::vector< std::string > x, int r, int d);
+
+// Drive
 
 int     main()
 {
-	std::vector< std::string >  x;
-	std::string s;
+	std::vector< std::string >	x;
+	std::string			s;
 	
-	int         slope, slopes;
+	int		r, rr;
 
 	while (std::cin >> s)
 		x.push_back(s);
-	slope = tree(x, 3, 1);
-	slopes = slope;
-	slopes *= tree(x, 1, 1) * tree(x, 5, 1) * tree(x, 7, 1) * tree(x, 1, 2);
-	std::cout << "Star 1 : " << slope << std::endl;
-	std::cout << "Star 2 : " << slopes << std::endl;
-
-	return (0);
+	r = tree(x, 3, 1);
+	rr = r * tree(x, 1, 1) * tree(x, 5, 1) * tree(x, 7, 1) * tree(x, 1, 2);
+	std::cout << "Star 1 : " << r << std::endl;
+	std::cout << "Star 2 : " << rr << std::endl;
 }
 
 //

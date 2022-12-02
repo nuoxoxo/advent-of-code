@@ -31,6 +31,7 @@ src	:=	aoc2107_crab.cpp
 #
 src	:=	aoc2101_sonar.cpp
 src	:=	aoc2001_sum.cpp
+src	:=	aoc2003_trees.cpp
 
 
 bud	:=	$(src:.cpp=.o)
@@ -42,10 +43,12 @@ bud	:=	$(src:.cpp=.o)
 
 ### Modify the last line
 $(name)	:	$(bud)
-		@#@ echo "compiling [$@] "
 		@ $(comp) $^ -o $@
+		@ ./out < 2003.0
+		@ echo "test" && echo ""
+		@ ./out < test
 		@#@ ./out < aoc2101.1; ./out < aoc2101.0
-		@ ./out < aoc2001.1; ./out < aoc2001.0
+		@#@ ./out < aoc2001.1; ./out < aoc2001.0
 		@#@ ./out < aoc2101.0
 		@#@ ./out < aoc2102.0
 		@#@ ./out < aoc2103.0
