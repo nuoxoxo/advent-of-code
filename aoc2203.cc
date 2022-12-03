@@ -70,7 +70,7 @@ int	main()
 		}
 	}
 	cout << "Star 1: " << r << endl;
-	cout << "Star 1: " << r2 << endl;
+	cout << "Star 2: " << r2 << endl;
 }
 
 int	calc(char c)
