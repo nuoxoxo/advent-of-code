@@ -1,28 +1,29 @@
-#include "h.hpp"
+#include "iostream"
+#include "vector"
+#include "string"
+
+using	namespace std;
+
+int	calc(char c);
 
 int	main()
 {
 	vector<string>	v;
 	string		ss;
+	int		x;
 	int		r = 0;
 	int		r2 = 0;
 
 	while (cin >> ss)
-	{
-		// for (char & c: ss)
-		//	c = tolower(c);
 		v.push_back(ss);
-	}
-	// for (string & s: v)
-	int	x = -1;
+	x = -1;
 	while (++x < (int) v.size())
 	{
 		string	s = v[x];
 		int	len = (int) s.length();
-		int	i, j;
 		int	c;
+		int	i, j;
 		bool	ok = false, ok2 = false;
-
 
 		i = -1;
 		while (++i < len / 2 && !ok)
@@ -33,11 +34,7 @@ int	main()
 			{
 				if (c == s[j])
 				{
-					if (c <= 'z' && c >= 'a')
-						r += c - 'a' + 1;
-					else
-						r += c - 'A' + 27;
-					// cout << (char)c << endl;
+					r += calc(c);
 					ok = true;
 				}
 			}
@@ -48,48 +45,38 @@ int	main()
 		if (x > (int) v.size() - 3 || x % 3)
 			continue ;
 
-		string	n = v[x + 1];
-		string	nn = v[x + 2];
-
-		cout << n << " - " << nn << endl;
+		string	n = v[x + 1]; // next
+		string	nn = v[x + 2]; // next next
 
 		i = -1;
 		ok = false;
 		ok2 = false;
 		while (++i < len && !(ok && ok2))
 		{
-			//string::iterator	it;
-			size_t	it;
+			int		it;
 			
 			ok = false;
 			ok2 = false;
 
 			c = s[i];
 			it = n.find((char) c);
-			// if (it != n.end())
 			if (it ^ string::npos)
-			{
 				ok = true;
-			}
-			
 			it = nn.find((char) c);
-			
-			// if (it != nn.end())
 			if (it ^ string::npos)
-			{
 				ok2 = true;
-			}
 			if (ok && ok2)
-			{
-				cout << (char) c << endl;
-				if (c <= 'z' && c >= 'a')
-					r2 += c - 'a' + 1;
-				else
-					r2 += c - 'A' + 27;
-			}
-			cout << "r2: " << r2 << endl;
+				r2 += calc(c);
 		}
 	}
 	cout << "Star 1: " << r << endl;
 	cout << "Star 1: " << r2 << endl;
+}
+
+int	calc(char c)
+{
+	if (c <= 'z' && c >= 'a')
+		return c - 'a' + 1;
+	else
+		return c - 'A' + 27;
 }
