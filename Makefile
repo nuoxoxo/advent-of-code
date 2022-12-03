@@ -17,8 +17,6 @@ comp	:=	g++ -std=c++11
 rmv	:=	rm -rf
 name	:=	out
 
-
-### Modify the src
 src	:=	aoc2101_sonar.cpp
 src	:=	aoc2101_sonar_long.cpp
 src	:=	aoc2102_dive.cpp
@@ -28,11 +26,14 @@ src	:=	aoc2105_venture.cpp
 src	:=	aoc2106_lantern.cpp
 src	:=	aoc2107_crab_brute.cpp
 src	:=	aoc2107_crab.cpp
-#
 src	:=	aoc2101_sonar.cpp
 src	:=	aoc2001_sum.cpp
 src	:=	aoc2003_trees.cpp
-
+src	:=	aoc2201.cc
+src	:=	aoc2202a.cc
+src	:=	aoc2202.cc
+src	:=	aoc2203a.cc
+src	:=	aoc2203.cc
 
 bud	:=	$(src:.cpp=.o)
 
@@ -40,12 +41,14 @@ bud	:=	$(src:.cpp=.o)
 		@#@ echo "compiling [$^] "
 		@ $(comp) -c $^ -o $@
 
-
-### Modify the last line
 $(name)	:	$(bud)
 		@ $(comp) $^ -o $@
-		@ ./out < 2003.0
-		@ echo "test" && echo ""
+		@ echo "data" && echo "" 
+		@ ./$(name) < 2203.0
+		@#@ ./$(name) < 2202.0
+		@#@ ./$(name) < 2201.0
+		@#@ ./$(name) < 2003.0
+		@ echo "" && echo "test" && echo ""
 		@ ./out < test
 		@#@ ./out < aoc2101.1; ./out < aoc2101.0
 		@#@ ./out < aoc2001.1; ./out < aoc2001.0
