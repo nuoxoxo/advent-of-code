@@ -5,10 +5,14 @@ with open('2204.0') as file:
         a.append(l.strip())
 res1 = 0
 res2 = 0
-for line in a:
-    L, R = line.split(',')
-    l, r = [int(_) for _ in L.split('-')]
-    ll, rr = [int(_) for _ in R.split('-')]
+for n in a:
+    aa = n.split(',')
+    iv = []
+    for i in range(2):
+        iv.append(aa[i].split('-'))
+    # print(iv)
+    l, r = int(iv[0][0]), int(iv[0][1])
+    ll, rr = int(iv[1][0]), int(iv[1][1])
     # print(l, r, ll, rr)
     if (l <= ll and r >= rr) or (ll <= l and rr >= r):
         # print(n)
