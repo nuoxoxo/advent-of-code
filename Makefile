@@ -1,9 +1,7 @@
 # comp	:=	c++ -Wall -Werror -Wextra -std=c++98
 comp	:=	g++ -std=c++11
-
 rmv	:=	rm -rf
 name	:=	out
-
 src	:=	aoc2101_sonar.cpp
 src	:=	aoc2101_sonar_long.cpp
 src	:=	aoc2102_dive.cpp
