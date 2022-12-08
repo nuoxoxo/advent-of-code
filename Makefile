@@ -1,66 +1,43 @@
-# comp	:=	c++ -Wall -Werror -Wextra -std=c++98
-comp	:=	g++ -std=c++11
-rmv	:=	rm -rf
+#comp	:=	c++ -std=c++11 -Wall -Werror -Wextra
+comp	:=	c++ -std=c++11 
 name	:=	out
-src	:=	aoc2101_sonar.cpp
-src	:=	aoc2101_sonar_long.cpp
-src	:=	aoc2102_dive.cpp
-src	:=	aoc2103_binary.cpp
-src	:=	aoc2104_bingo.cpp
-src	:=	aoc2105_venture.cpp
-src	:=	aoc2106_lantern.cpp
-src	:=	aoc2107_crab_brute.cpp
-src	:=	aoc2107_crab.cpp
-src	:=	aoc2101_sonar.cpp
-src	:=	aoc2001_sum.cpp
-src	:=	aoc2003_trees.cpp
+rmv	:=	rm -f
+
 src	:=	aoc2201.cc
-src	:=	aoc2202a.cc
 src	:=	aoc2202.cc
-src	:=	aoc2203a.cc
 src	:=	aoc2203.cc
 src	:=	aoc2204.cc
-
-#%.o	:	%.cpp
-#		@#@ echo "compiling [$^] "
-#		@ $(comp) -c $^ -o $@
-
-$(name)	:	$(src)
-		@ $(comp) $^ -o $@
-		@ echo "data" && echo ""
-		@ ./$(name) < 2204.0
-		@#@ ./$(name) < 2204a.0
-		@#@ ./$(name) < 2203.0
-		@#@ ./$(name) < 2203a.0
-		@#@ ./$(name) < 2202.0
-		@#@ ./$(name) < 2202a.0
-		@#@ ./$(name) < 2202.0
-		@#@ ./$(name) < 2201.0
-		@#@ ./$(name) < 2003.0
-		@#@ ./$(name) < 2003.1
-		@ echo "" && echo "test" && echo ""
-		@ ./out < test
-		@#@ ./out < aoc2101.1
-		@#@ ./out < aoc2101.0
-		@#@ ./out < aoc2001.1
-		@#@ ./out < aoc2001.0
-		@#@ ./out < aoc2101.0
-		@#@ ./out < aoc2102.0
-		@#@ ./out < aoc2103.0
-		@#@ ./out < aoc2104.0
-		@#@ ./out < aoc2105.0
-		@#@ ./out < aoc2106.0
-		@#@ ./out < aoc2107.0
-		@ make f
-
+src	:=	aoc2205.cc
+src	:=	aoc2205_part1.cc
+src	:=	aoc2205_part2.cc
+src	:=	aoc2206.cc
+src	:=	aoc2207.cc
+src	:=	aoc2208.cc
+src	:=	aoc2209.cc
 
 all	:	$(name)
 
+$(name)	:	$(src)
+		@ $(comp) $^ -o $@
+		@ echo "data"; echo "" 
+		@ ./$(name) < 2209.0
+		@#@ ./$(name) < 2208.0
+		@#@ ./$(name) < 2207.0
+		@#@ ./$(name) < 2206.0
+		@#@ ./$(name) < 2205.0
+		@#@ ./$(name) < 2204.0
+		@#@ ./$(name) < 2203.0
+		@#@ ./$(name) < 2202.0
+		@#@ ./$(name) < 2201.0
+		@ echo ""; echo "test"; echo ""
+		@ ./$(name) < test
+		@ make f
+
 clean	:
-		@ $(rmv) $(bud)
+		@ $(rmv) $(name)
 
 fclean	:	clean
-		@ $(rmv) $(name) a.out
+		@ $(rmv) out *.out
 
 f	:	fclean
 re	:	f all

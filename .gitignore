@@ -10,3 +10,5 @@
 !*.sh
 !*.js
 !Makefile
+!python_sandbox
+!different_solutions
