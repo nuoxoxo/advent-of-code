@@ -1,14 +1,12 @@
 a = []
-
 # with open('2210.1') as file:
-with open('2210.0') as file:
+with open('_inputs/2210.0') as file:
     for line in file:
         l = line.strip().split()
         a.append(0)        
         if len(l) == 2:
-            v = int(l[1])
-            a.append(v)
-# print(a, len(a))
+            a.append(int(l[1]))
+print(a, len(a))
 
 x = 1
 r = 0
@@ -46,6 +44,7 @@ while True:
     if cc == 240: # (?) missing something if 220
         break
     i += 1
+    print(ss, '\n')
 
 print('Star 1:', r)
 print('Star 2: \n\n' + ss)
