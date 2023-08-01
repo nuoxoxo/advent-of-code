@@ -1,14 +1,14 @@
 a = []
 
 # with open('2210.1') as file:
-with open('2210.0') as file:
+with open('_inputs/2210.0') as file:
     for line in file:
         l = line.strip().split()
         a.append(0)        
         if len(l) == 2:
             v = int(l[1])
             a.append(v)
-# print(a, len(a))
+print(a, len(a))
 
 x = 1
 r = 0
