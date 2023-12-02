@@ -1,16 +1,19 @@
 comp	:=	c++ -std=c++17
 name	:=	out
 rmv	:=	rm -f
-pre	:=	_inputs/
+pre	:=	_inputs_/
 src	:=	2301.cc
+src	:=	2302.cc
 all	:	$(name)
 $(name)	:	$(src)
 		@ $(comp) $^ -o $@
-		@ ./$(name) < $(pre)01.in
+		@ ./$(name) < $(pre)02.in
+		@#@ ./$(name) < $(pre)01.in
 
 test	:	all
-		@ echo "\ntest"
-		@ ./$(name) < $(pre)01.1
+		@ echo "\n\n------\ntest\n------\n"
+		@ ./$(name) < $(pre)02.test
+		@#@ ./$(name) < $(pre)01.test
 		@ make f
 
 clean	:
@@ -18,6 +21,8 @@ clean	:
 
 fclean	:	clean
 		@ $(rmv) out *.out
+
+t		:	test
 
 f	:	fclean
 re	:	f all
