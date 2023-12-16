@@ -2,13 +2,12 @@
 !*.c
 !*.cc
 !*.cpp
-!*.java
 !*.py
-!*.py3
-!*.pypy
 !*.md
 !*.sh
 !*.go
+!*.ts
+!*.sh
 !Makefile
 !_inputs_/
 !_inputs_/*.0
@@ -16,3 +15,6 @@
 !_inputs_/*.2
 !python_sandbox/
 !different_solutions/
+!pset-on-deno/
+!*denon.json
+!*.tpl

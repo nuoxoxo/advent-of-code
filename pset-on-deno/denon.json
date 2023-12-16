@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": {
+      "cmd": "deno run",
+      "watch": true,
+      "allow": ["read", "net", "env"],
+      "ext": "ts",
+      "unstable": true
+    }
+  }
+}
