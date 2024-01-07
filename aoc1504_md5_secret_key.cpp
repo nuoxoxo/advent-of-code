@@ -1,18 +1,67 @@
+#include "iostream"
+
+using namespace std;
+
+//  Example
+//  string data = "jdfgsdhfsdfsd 156445dsfsd7fg/*/+bfjsdgf%$^";
+//  string value = GetMD5String(data);
+//  Output
+//  67046f2ecf6d4a8aee9dedcffc35b91b
+static string GetMD5String(string);
+
+int main(int c, char **v)
+{
+    if (c != 2)
+        return 0;
+    cout << v[1] << endl;
+
+    string key = v[1];
+    int found5 = 0;
+    int n = 0;
+
+    while (42)
+    {
+        string new_key = key + to_string(n);
+        string s = GetMD5String( new_key );
+
+        int i = 0;
+        while (i < 6)
+        {
+            if (s[i] != '0')
+                break;
+            i++;
+            if (i == 5 && found5 == 0)
+            {
+                cout << "part 1 : " << n << endl;
+                found5++;
+            }
+            if (i == 6) 
+            {
+                cout << "part 2 : " << n << endl;
+                break ;
+            }
+        }
+        if (i == 6)
+            break ;
+        n++;
+    }
+}
+
 // MD5 hash function ::
 //
 // programmingalgorithms.com/algorithm/md5/
 //
 
 /*****Please include following header files*****/
-// string
+// string cmath
 /***********************************************/
 
 /*****Please use following namespaces*****/
 // std
 /*****************************************/
 
-#include "string"
-using namespace std;
+//#include "string"
+#include "cmath"
 
 typedef union uwb {
 	unsigned w;
@@ -145,52 +194,4 @@ static string GetMD5String(string msg) {
 	}
 
 	return str;
-}
-
-//  Example
-//  string data = "jdfgsdhfsdfsd 156445dsfsd7fg/*/+bfjsdgf%$^";
-//  string value = GetMD5String(data);
-//  Output
-//  67046f2ecf6d4a8aee9dedcffc35b91b
-
-//  DRIVE
-
-#include "iostream"
-#include "sstream"
-
-//std::string my_dear_itoa(int n);
-//int         my_dear_atoi(string s);
-//int         count_digit(int n);
-
-int     main(int argc, char **argv)
-{
-        int         n, i, found5;
-        string      key;
-
-        if (argc != 2)  return (0);
-        key = argv[1];
-        found5 = n = 0;
-        while (1)
-        {
-            stringstream    ss;
-            string          num;
-            ss << n;
-            ss >> num;
-            string s = GetMD5String(key + num);
-            i = 0;
-            while (i < 6)
-            {
-                if (s[i] != 48) break;
-                i++;
-                if (i == 5 && !found5)
-                {
-                    cout << "Star 1 : " << n << endl;
-                    found5++;
-                }
-                if (i == 6) cout << "Star 2 : " << n << endl;
-            }
-            if (i == 6) break;
-            n++;
-        }
-        return (0);
 }
